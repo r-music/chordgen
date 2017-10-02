@@ -49,3 +49,8 @@ gerar_um <- function(i) {
 gerar_n <- function(n = 1) {
   purrr::map_chr(1:n, gerar_um)
 }
+
+
+
+
+
