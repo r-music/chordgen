@@ -42,11 +42,11 @@ Check out the shiny app
 
 ``` r
 app <- system.file("chordgen/app.R", package = "chordgen")
-runApp(app)
+shiny::runApp(app)
 ```
 
 Or run directly from github (after installing `chordgen`, of course)
 
 ``` r
-runGitHub("chordgen", "jtrecenti", subdir="inst/chordgen/")
+shiny::runGitHub("chordgen", "jtrecenti", subdir="inst/chordgen/")
 ```
