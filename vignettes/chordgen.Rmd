@@ -1,0 +1,40 @@
+---
+title: "Vignette Title"
+author: "Vignette Author"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This is a random chord generator. It was created for two main purposes:
+
+1. proof of concept of `music21` package functionalities
+2. Help me to study music perception :)
+
+Para criar um acorde aleatório, vamos seguir esses passos:
+
+A partir da definição de quantas notas, entre 3 e 6:
+
+1. montar um acorde em C4
+2. transladar o acorde.
+3. inverter o acorde.
+
+```{r, fig.width=8}
+library(chordgen)
+chordgen(20, n_notes = 3:4, octave = 0, 
+         transpose = 0, 
+         invert = FALSE,
+         add_lyric = TRUE) %>% 
+  plot()
+```
+
