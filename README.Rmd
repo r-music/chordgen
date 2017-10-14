@@ -1,28 +1,36 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-chordgen
-========
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# chordgen
 
 The goal of chordgen is to generate random chords using R
 
-Installation
-------------
+## Installation
 
 You can install chordgen from github with:
 
-``` r
+```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("jtrecenti/chordgen")
 ```
 
-Example
--------
+## Example
 
 This is a basic example:
 
-``` r
+```{r chords, fig.width=8, fig.height=4}
 library(chordgen)
-#> Loading required package: music21
 chordgen(20, 
          n_notes = 3:4, 
          octave = 0, 
@@ -33,20 +41,19 @@ chordgen(20,
   plot()
 ```
 
-![](README-chords-1.png)
-
-Shiny app
----------
+## Shiny app
 
 Check out the shiny app
 
-``` r
+```{r, eval=FALSE}
 app <- system.file("chordgen/app.R", package = "chordgen")
 runApp(app)
 ```
 
 Or run directly from github (after installing `chordgen`, of course)
 
-``` r
+```{r, eval=FALSE}
 runGitHub("chordgen", "jtrecenti", subdir="inst/chordgen/")
 ```
+
+
