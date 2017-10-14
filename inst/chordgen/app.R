@@ -13,7 +13,7 @@ ui <- fluidPage(
   titlePanel("Gerador de acordes"),
   sidebarLayout(
     sidebarPanel(
-      sliderInput("n", "Quantidade de acordes", 1, 100, 60),
+      sliderInput("n", "Quantidade de acordes", 1, 100, 30),
       sliderInput("n_notes", "Quantidade de notas", 3, 7, c(3, 4),
                   dragRange = FALSE),
       selectInput("triad_types", "Tipos de tríades", c(
@@ -27,7 +27,7 @@ ui <- fluidPage(
                   dragRange = FALSE),
       tags$hr(),
       checkboxInput("invert", "Adicionar inversões?", value = FALSE),
-      checkboxInput("add_lyric", "Adicionar harmonia?", value = TRUE),
+      checkboxInput("add_lyric", "Adicionar harmonia?", value = FALSE),
       tags$hr(),
       actionButton("go", "Refazer!")
     ),
