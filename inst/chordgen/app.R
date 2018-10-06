@@ -10,7 +10,7 @@ write_midi <- function(s, path) {
 
 ui <- fluidPage(
   tags$script(src = "//www.midijs.net/lib/midi.js"),
-  titlePanel("Gerador de acordes"),
+  titlePanel("chordgen: Random Chord Generator"),
   sidebarLayout(
     sidebarPanel(
       sliderInput("n", "Number of chords", 1, 100, 30),
