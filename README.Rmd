@@ -22,7 +22,7 @@ You can install chordgen from github with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-devtools::install_github("jtrecenti/chordgen")
+devtools::install_github("r-music/chordgen")
 ```
 
 ## Example
@@ -31,6 +31,7 @@ This is a basic example:
 
 ```{r chords, fig.width=8, fig.height=4}
 library(chordgen)
+
 chordgen(20, 
          n_notes = 3:4, 
          octave = 0, 
@@ -53,7 +54,7 @@ shiny::runApp(app)
 Or run directly from github (after installing `chordgen`, of course)
 
 ```{r, eval=FALSE}
-shiny::runGitHub("chordgen", "jtrecenti", subdir="inst/chordgen/")
+shiny::runGitHub("chordgen", "r-music", subdir="inst/chordgen/")
 ```
 
 
